@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connection Result</title>
+</head>
+<body>
+    <h1><%= type %> Connection Result</h1>
+    <% if (success) { %>
+        <p>Connection successful!</p>
+        <pre><%= JSON.stringify(details, null, 2) %></pre>
+    <% } else { %>
+        <p>Connection failed: <%= error %></p>
+    <% } %>
+    <a href="/">Go Back</a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Connections</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Connection Checker</h1>
+
+    <h2>Check MySQL Connection</h2>
+    <form action="/check/mysql" method="post">
+        <label for="mysql-host">Host:</label>
+        <input type="text" id="mysql-host" name="host" required>
+        <label for="mysql-port">Port:</label>
+        <input type="number" id="mysql-port" name="port" required>
+        <label for="mysql-user">User:</label>
+        <input type="text" id="mysql-user" name="user" required>
+        <label for="mysql-password">Password:</label>
+        <input type="password" id="mysql-password" name="password">
+        <label for="mysql-database">Database:</label>
+        <input type="text" id="mysql-database" name="database" required>
+        <button type="submit">Check MySQL</button>
+    </form>
+
+    <h2>Check Redis Connection</h2>
+    <form action="/check/redis" method="post">
+        <label for="redis-host">Host:</label>
+        <input type="text" id="redis-host" name="host" required>
+        <label for="redis-port">Port:</label>
+        <input type="number" id="redis-port" name="port" required>
+        <label for="redis-password">Password:</label>
+        <input type="password" id="redis-password" name="password">
+        <button type="submit">Check Redis</button>
+    </form>
+</body>
+</html>
